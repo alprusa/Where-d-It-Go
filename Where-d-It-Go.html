@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Where'd It Go</title>
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="Where-d-It-Go.css">
+	</head>
+	<body>
+        <h1>Where'd It Go?<h1>
+        
+		<!-- Start, Stop, and Reset Buttons -->
+        <button id="Start" class="btn-success">Start</button>
+        <button id="Stop" class="btn-danger">Stop</button>
+        <button id="Reset" class="btn-warning">Reset</button>
+        
+        <!-- User input textbox -->
+        <div id="textBox">
+            <h3>Input a value between 0 and 1</h3>
+            <input id="keywordBox" type="text" value="User Value" />
+            <input id="Enter" type="button" value="Get Profit" class="btn-primary"/>
+        </div>
+        
+        <!-- Show Current StochVal value -->
+        <h4 id="StochVal">The Stochastic Value Used for the Current Calculation will be Placed Here</h4>
+        <button id="Show" class="btn-primary">Show Stochastic Value</button>
+         
+        <!-- Allow user to use a different function -->
+        <h4 id="Func">Enter a New Function to Calculate Profit</h4>
+        <h5 id="Func">Use the Key Words userValue and stochValue</h5>
+        
+        <textarea id="NewFunc" class="form-control">Profit = (1 - (userValue - stochValue)^2)</textarea>
+        
+        <button id="ChFunc" class="btn-primary">Change Function</button>
+        <button id="restFunc" class="btn-primary">Reset Function</button>
+        
+        <p id="Func">To be sure that you are getting the correct answer put a space</br>
+            between the characters +,-,/,*,% and the value or ().</p>
+            
+        <!-- Flot elements (Got help with this part of code from:
+            http://www.jqueryflottutorial.com/how-to-make-jquery-flot-time-series-chart.html-->
+        <h4 id="chartText">Get Updated Plot Chart of User and Stochastic Values</h4>
+        <div id="inputValuesChart"></div>
+        
+        <div class="profitChart"><h4 id="textProfitsChart">Get Updated Plot Chart of User Values</h4>
+        <div id="profitValuesChart"></div></div>
+        
+        <!-- Show New Profit value -->
+        <h5 id="badValue"></h5>
+        <button id="addValue" class="btn-default">Add</button>
+        <h4 id="ProfitNum"></h4>
+        
+        <!-- Get Previous Profit values -->
+        <ol id="OverallProfits" type="1" class="list-group"></ol>
+        
+        <!--jQuery and Flot Files-->
+        <script src="jquery-1.11.js"></script>
+        <script type="text/javascript" src="flot-0.8.3/flot/jquery.flot.js"></script>
+        <script type="text/javascript" src="flot-0.8.3/flot/jquery.flot.time.js"></script>   
+        <script type="text/javascript" src="flot-0.8.3/flot/jquery.flot.axislabels.js"></script>
+        
+        <!--Bootstrap File-->
+        <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+		
+        <!--Main Files-->
+        <script type="text/javascript" src="ValueCharts.js"></script>
+        <script type="text/javascript" src="Where-d-It-Go.js"></script>
+	</body>
+<html/>

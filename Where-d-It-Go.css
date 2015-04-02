@@ -1,0 +1,50 @@
+body{
+   background-color: #F2F2F2;
+}
+
+#StochVal{
+    visibility: hidden;
+}
+
+.list-group{
+    width: 200px;
+    background-color: white;
+}
+
+#NewFunc{
+    resize: none;
+    width: 300px;
+}
+
+#ChFunc{
+    position:absolute;
+    top:345px;
+    left:330px;
+}
+
+#restFunc{
+    position:absolute;
+    top:375px;
+    left:335px;
+}
+
+#profitValuesChart{
+    width: 400px;
+    height: 300px;
+}
+
+#inputValuesChart{
+    width: 400px;
+    height: 300px;
+}
+
+.profitChart{
+    position:absolute;
+    text-align:center;
+    top:458px;
+    left:500px;
+}
+#addValue{
+    visibility: hidden;
+}
+
